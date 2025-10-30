@@ -22,7 +22,8 @@ threshold = 30
 Answer:
 
 ```python
-
+filtered_df = df[(df > threshold).any(axis=1)]
+print(filtered_df)
 ```
 
 ### Question 2
@@ -38,6 +39,8 @@ df = pd.DataFrame({'A': [2, 1, 2], 'B': [2, 3, 1], 'C': [1, 2, 3]})
 Answer:
 
 ```python
+sorted_df = df.sort_values(by=['A', 'B'])
+print(sorted_df)
 
 ```
 
@@ -55,7 +58,8 @@ df2 = pd.DataFrame({'A': [7, 8, 9], 'B': [10, 11, 12]})
 Answer:
 
 ```python
-
+concatenated_df = pd.concat([df1, df2], )
+print(concatenated_df)
 ```
 
 ### Question 4
@@ -71,7 +75,8 @@ df = pd.DataFrame({'A': [1, 2, 3, 4, 5]})
 Answer:
 
 ```python
-
+df['Cumulative_A'] = df['A'].cumsum()
+df
 ```
 
 ### Question 5
@@ -87,7 +92,7 @@ series = pd.Series(['apple', 'banana', 'cherry'])
 Answer:
 
 ```python
-
+series.str.upper()
 ```
 
 ## Submission
